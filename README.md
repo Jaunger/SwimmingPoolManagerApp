@@ -92,13 +92,9 @@ This client communicates with a RESTful backend (see [swimming-pool-backend](htt
 ---
 
 ## Key Screenshots
-
 | Main Screen | Student Hub | Add/Edit Student | Schedule View |
-|:-----------:|:-----------:|:----------------:|:-------------:|
-| ![Main](/docs/screenshots/main.png) | ![Hub](/docs/screenshots/hub.png) | ![Add](/docs/screenshots/add.png) | ![Schedule](/docs/screenshots/schedule.png) |
-
-*(Place your `docs/screenshots/*.png` into the repo.)*
-
+|:----------:|:-----------:|:----------------:|:-------------:|
+| <img src="https://github.com/user-attachments/assets/7daad287-e81e-4fe5-9446-bf096ff3ece1" width="200"/> | <img src="https://github.com/user-attachments/assets/e84a03ab-0fb1-4577-88a5-88007c2710b8" width="200"/> | <img src="https://github.com/user-attachments/assets/c86ebcab-ec64-4fca-9fa1-e6852f915684" width="200"/> | <img src="https://github.com/user-attachments/assets/88cf92c0-e09f-43db-a0b0-a58f98052e29" width="200"/> |
 ---
 
 ## API Endpoints
@@ -133,4 +129,4 @@ See the backend README for full details.
 
 ## License
 
-MIT © Your Name / Organization  
+MIT © Daniel Raby
