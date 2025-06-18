@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">SwimmingPoolManager</string>
+    <string name="schedule_time_format">%1$s - %2$s</string>
+    <string name="schedule_type_format">%1$s | %2$s</string>
+    <string name="instructor_label">Instructor: %1$s</string>
+    <string name="no_students_placeholder">No students enrolled</string>
+    <string name="update">Update</string>
+    <string name="GroupColor">#A5D6A7</string>
+    <string name="PrivateColor">#90CAF9</string>
+
+</resources>

@@ -1,0 +1,108 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <!-- Top Controls -->
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/topControls"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentTop="true">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnBack"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="← Back"
+            app:backgroundTint="@color/colorPrimary"
+            app:iconTint="@color/colorOnPrimary"
+            android:textColor="@color/colorOnPrimary"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnGenerate"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Generate"
+            app:backgroundTint="@color/colorSecondary"
+            android:layout_marginStart="12dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnClear"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Clear"
+            app:backgroundTint="@color/colorPrimaryVariant"
+            android:layout_marginStart="12dp"/>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <!-- Spinner, Grid, Issues button (unchanged) -->
+    <androidx.appcompat.widget.AppCompatSpinner
+        android:id="@+id/daySelectorSpinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topControls"
+        android:layout_marginTop="12dp" />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:id="@+id/mainContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/daySelectorSpinner"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal">
+
+        <HorizontalScrollView
+            android:id="@+id/gridHorizontalScroll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/headerRow"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingStart="40dp"
+                    android:orientation="horizontal" />
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:id="@+id/dayGridContainer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+        </HorizontalScrollView>
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <androidx.appcompat.widget.AppCompatImageButton
+        android:id="@+id/btnIssues"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/mainContainer"
+        android:layout_centerHorizontal="true"
+        android:src="@android:drawable/ic_dialog_alert"
+        android:tint="@color/colorSecondary"
+        android:contentDescription="Show scheduling issues" />
+
+    <!-- 4) Indeterminate ProgressBar, centered -->
+    <ProgressBar
+        android:id="@+id/pbLoading"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/colorPrimary"/>
+</RelativeLayout>
